@@ -5,7 +5,7 @@ import { Link, Route, Switch } from 'react-router-dom'
 import * as yup from 'yup';
 
 import Home from './components/Home'
-import OrderForms from "./components/Order-Forms";
+import OrderForms from "./components/OrderForms";
 import schema from "./components/Schema";
 
 const initialFormVals = {
