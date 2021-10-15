@@ -4,7 +4,8 @@ import * as yup from 'yup';
 const schema = yup.object().shape({
     customerName: yup
         .string()
-        .required("name must be at least 2 characters"),
+        .required("name must be at least 2 characters")
+        .min(2, "name must be at least 2 characters"),
     pizzaSauce: yup
         .string()
         .required("Must choose a sauce!"),

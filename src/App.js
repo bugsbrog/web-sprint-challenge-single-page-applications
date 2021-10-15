@@ -8,7 +8,6 @@ import Home from './components/Home'
 import OrderForms from "./components/Order-Forms";
 import schema from "./components/Schema";
 
-// initialFormValues
 const initialFormVals = {
   customerName: '',
   pizzaSauce: '',
@@ -20,15 +19,13 @@ const initialFormVals = {
   special: '',
 }
 
-// initialFormErrors
 const initialFormErrors = {
   customerName: '',
-  pizzaSize: ''
+  pizzaSize: '',
 }
 
-// initialPizza & initialDisabled
 const initialPizza = []
-const initialDisabled = true;
+const initialDisabled = true
 
 // const
 const App = () => {
@@ -47,9 +44,9 @@ const App = () => {
         .catch(err => {
           console.error(err);
     }).finally(() => setFormVals(initialFormVals))
-    }
+  }
 
-    // validate
+// validate
     const validate = (name, value) => {
       yup.reach(schema, name)
         .validate(value)
@@ -89,24 +86,24 @@ const App = () => {
   
 // return
 return (
-  <div className='App'>
-  {/* Route path */}
-    <Route path="/pizza">
-        <OrderForms
-          formVals={formVals}
-          change={inputChange}
-          updateForm={updateForm}
-          submit={formSubmit}
-          errors={formErrors}
-          disabled={disabled}
-          />
-        </Route>
-        {/* Route path */}
-        <Route exact path="/">
-          <Home />
-        </Route>
-    </div>
-);
+    <div className='App'>
+    {/* Route path */}
+      <Route path="/pizza">
+          <OrderForms
+            formVals={formVals}
+            change={inputChange}
+            updateForm={updateForm}
+            submit={formSubmit}
+            errors={formErrors}
+            disabled={disabled}
+            />
+          </Route>
+          {/* Route path */}
+          <Route exact path="/">
+            <Home />
+          </Route>
+      </div>
+  );
 };
 
 // export default
