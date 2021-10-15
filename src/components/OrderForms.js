@@ -5,7 +5,7 @@ import React, { useState } from 'react';
   export default function OrderForms(props) {
     
     // props
-    const { formVals, change, submit, errors, disabled} = props;
+    const { formVals, change, submit, errors, disabled } = props;
 
     // evt.target and 'checkbox
     const onChange = evt => {
