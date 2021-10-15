@@ -7,21 +7,16 @@ const schema = yup.object().shape({
         .required("name must be at least 2 characters")
         .min(2, "name must be at least 2 characters"),
     pizzaSauce: yup
-        .string()
-        .required("Must choose a sauce!"),
+        .string(),
     pizzaSize: yup
         .string()
         .required("Pizza size is required!"),
     special: yup
         .string(),
-    pepperoni: yup.boolean()
-        .oneOf([true]),
-    sausage: yup.boolean()
-        .oneOf([true]),
-    onion: yup.boolean()
-        .oneOf([true]),
+    pepperoni: yup.boolean(),
+    sausage: yup.boolean(),
+    onion: yup.boolean(),
     cheese: yup.boolean()
-        .oneOf([true]),
 })
 
 export default schema;

@@ -111,12 +111,13 @@ import React, { useState } from 'react';
             </label>
                 </div>
         <div id='special-text'>
-            <label> Choice of Substitute:&nbsp;&nbsp;
+            <label> Special Instructions :&nbsp;&nbsp;
                 <input
                     type="text"
                     name="special"
                     value={formVals.special}
                     onChange={onChange}
+                    placeholder="Anything else to add?"
                     />
                 </label>
                     </div>
@@ -132,8 +133,8 @@ import React, { useState } from 'react';
                     placeholder="Enter a name"
                     />
             </label>
-        <div className="submit">
-            <button> Submit </button>
+                <div className="submit">
+                    <button id='submitBtn' disabled={disabled}>Add to Order</button>
         </div>
     </div>
 </form>

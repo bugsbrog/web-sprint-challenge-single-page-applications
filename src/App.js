@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { Link, Route, Switch } from 'react-router-dom'
 import * as yup from 'yup';
+import Pizza from './components/Pizza'
 
 import Home from './components/Home'
 import OrderForms from "./components/OrderForms";
@@ -69,7 +70,7 @@ const App = () => {
   const formSubmit = () => {
     const newPizza = {
       customerName: formVals.customerName.trim(),
-      pizzaSize: formVals.pizzaSize.trim(),
+      pizzaSize: formVals.pizzaSize,
       special: formVals.special.trim(),
     }
 
@@ -95,9 +96,14 @@ return (
             updateForm={updateForm}
             submit={formSubmit}
             errors={formErrors}
-            disabled={disabled}
+            disabled={!formVals.pizzaSize && !formVals.pizzaSauce ? true : false}
             />
           </Route>
+          {pizza.map(pizza => {
+            return (
+              <Pizza key={pizza.id} details={pizza} />
+            )
+         })}
           {/* Route path */}
           <Route exact path="/">
             <Home />
