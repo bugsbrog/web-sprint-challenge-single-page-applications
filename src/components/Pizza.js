@@ -8,11 +8,12 @@ export default function Person(props) {
 
 // return
     return (
-        <div className='container'>
+        <div id='pizza-form'>
             <h4>{details.customerName}</h4>
             <p>{details.pizzaSauce}</p>
             <p>{details.pizzaSize}</p>
             <p>{details.pepperoni}</p>
+            <p>{details.cheese}</p>
             <p>{details.sausage}</p>
             <p>{details.onion}</p>
             <p>{details.special}</p>

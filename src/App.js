@@ -23,6 +23,7 @@ const initialFormVals = {
 const initialFormErrors = {
   customerName: '',
   pizzaSize: '',
+  pizzaSauce: '',
 }
 
 const initialPizza = []
@@ -96,8 +97,10 @@ return (
             updateForm={updateForm}
             submit={formSubmit}
             errors={formErrors}
-            disabled={!formVals.pizzaSize && !formVals.pizzaSauce ? true : false}
+            disabled={disabled}
             />
+            <Pizza
+            details={pizza} />
           </Route>
           {pizza.map(pizza => {
             return (

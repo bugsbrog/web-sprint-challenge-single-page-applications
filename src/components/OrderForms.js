@@ -27,6 +27,7 @@ import React, { useState } from 'react';
         <div className='errors'>
             <div>{errors.customerName}</div>
             <div>{errors.pizzaSize}</div>
+            <div>{errors.pizzaSauce}</div>
         </div>
         <div id='size-dropdown'>
             <label> Choice of Size:&nbsp;&nbsp; 
@@ -34,6 +35,7 @@ import React, { useState } from 'react';
                     name='pizzaSize'
                     value={formVals.pizzaSize}
                     onChange={onChange}>
+                    value={formVals.pizzaSize}
                         
                     {/* options */}
                     <option value=''> --Select a Size --</option>
@@ -51,6 +53,7 @@ import React, { useState } from 'react';
                         type='radio'
                         name="pizzaSauce"
                         onChange={onChange}
+                        value={formVals.pizzaSauce}
                         />
                     </label>
                 <label> Garlic Ranch
@@ -58,6 +61,7 @@ import React, { useState } from 'react';
                         type='radio'
                         name="pizzaSauce"
                         onChange={onChange}
+                        value={formVals.pizzaSauce}
                         />
                     </label>
                     <label> BBQ Sauce
@@ -65,6 +69,7 @@ import React, { useState } from 'react';
                         type='radio'
                         name="pizzaSauce"
                         onChange={onChange}
+                        value={formVals.pizzaSauce}
                         />
                     </label>
                     <label> Spinach Alfredo
@@ -72,6 +77,7 @@ import React, { useState } from 'react';
                         type='radio'
                         name="pizzaSauce"
                         onChange={onChange}
+                        value={formVals.pizzaSauce}
                         />
                     </label>
                 </div>

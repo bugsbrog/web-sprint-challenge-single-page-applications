@@ -14,9 +14,9 @@ const schema = yup.object().shape({
     special: yup
         .string(),
     pepperoni: yup.boolean(),
+    cheese: yup.boolean(),
     sausage: yup.boolean(),
     onion: yup.boolean(),
-    cheese: yup.boolean()
 })
 
 export default schema;
